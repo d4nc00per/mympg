@@ -1,0 +1,32 @@
+.pad-top {
+	padding: 1rem 1.5rem;
+}
+.container {
+	max-width: 400px;
+}
+input[type="tel"] {
+	width: 100%;
+}
+label {
+	width: 100%;
+}
+label.method {
+	cursor: pointer;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+.row {
+	padding: 0.5rem;
+}
+.half {
+	width: 50%;
+	float: left;
+}
+#calculate {
+	display: block;
+	margin: 0 auto;
+}

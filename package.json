@@ -1,0 +1,17 @@
+{
+  "name": "mympg",
+  "version": "1.0.0",
+  "description": "A simple mpg calculator",
+  "repository": "https://github.com/d4nc00per/mympg",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.9",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "start": "npm install && gulp"
+  },
+  "author": "Daniel Cooper"
+}
