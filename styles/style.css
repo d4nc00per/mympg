@@ -1,32 +1,68 @@
 .pad-top {
-	padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
+
 .container {
-	max-width: 400px;
+    max-width: 400px;
 }
+
 input[type="tel"] {
-	width: 100%;
+    width: 100%;
 }
+
 label {
-	width: 100%;
+    width: 100%;
 }
+
 label.method {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .right {
-	text-align: right;
+    text-align: right;
 }
+
 .center {
-	text-align: center;
+    text-align: center;
 }
+
 .row {
-	padding: 0.5rem;
+    padding: 0.5rem;
 }
+
 .half {
-	width: 50%;
-	float: left;
+    width: 50%;
+    float: left;
 }
+
+.hide {
+    display: none;
+}
+
 #calculate {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-gbp:before {
+  content: "\e149";
+}
+.glyphicon-scale:before {
+  content: "\e230";
 }

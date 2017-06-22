@@ -1,38 +1,37 @@
-
 function updateInputs(e) {
-	var calcMethod = $('input[name=calcMethod]:checked').val();
+    var calcMethod = $('input[name=calcMethod]:checked').val();
 
-	if (calcMethod == 0) {
-		$('#litCostRow').slideDown();
-		$('#totCostRow').slideDown();
-		$('#fuelAmountRow').slideUp();
-		$('#fuelAmountRow').val("");
-	} else {
-		$('#litCostRow').slideUp();
-		$('#totCostRow').slideUp();
-		$('#fuelAmountRow').slideDown();
-		$('#litCostRow').val("");
-		$('#totCostRow').val("");
-	}
+    if (calcMethod == 0) {
+        $('#litCostRow').slideDown();
+        $('#totCostRow').slideDown();
+        $('#fuelAmountRow').slideUp();
+        $('#fuelAmountRow').val("");
+    } else {
+        $('#litCostRow').slideUp();
+        $('#totCostRow').slideUp();
+        $('#fuelAmountRow').slideDown();
+        $('#litCostRow').val("");
+        $('#totCostRow').val("");
+    }
 }
 
-$(document).ready(function(){
-	$('#calculate').click(function() {
-		var c = new Mpg();
-		c.litreCost = $('#litreCost').val();
-		c.totalCost = $('#totCost').val();
-		c.fuelAmount = $('#fuelAmount').val();
-		c.mileage = $('#mileage').val();
-		
-		var result = c.Calculate($('input[name=calcMethod]:checked').val());
+$(document).ready(function() {
+    $('#calculate').click(function() {
+        var c = new Mpg();
+        c.litreCost = $('#litreCost').val();
+        c.totalCost = $('#totCost').val();
+        c.fuelAmount = $('#fuelAmount').val();
+        c.mileage = $('#mileage').val();
 
-		$('#result').text(result + "mpg");
-	});
+        var result = c.Calculate($('input[name=calcMethod]:checked').val());
 
-	$('input[name=calcMethod]').change(updateInputs);
+        $('#result').text(result + "mpg");
+    });
 
-	 $('html').keypress(function(e){
-      if(e.keyCode==13)
-      $('#calculate').click();
+    $('input[name=calcMethod]').change(updateInputs);
+
+    $('html').keypress(function(e) {
+        if (e.keyCode == 13)
+            $('#calculate').click();
     });
 });

@@ -2,68 +2,68 @@
 layout: default
 ---
 <div class="container">
-	<div class="pad-top">
-		<h1 class="center">Mpg Calculator</h1>
-		<div class="row">
-			<div class="half center">
-				<input type="radio" id="fc" name="calcMethod" value="0" checked>
-				<br>
-				<label class="method" for="fc">
+    <div class="pad-top">
+        <h1 class="center">Mpg Calculator</h1>
+        <div class="row">
+            <div class="half center">
+                <input type="radio" id="fc" name="calcMethod" value="0" checked>
+                <br>
+                <label class="method" for="fc">
 					<span class="glyphicon glyphicon-gbp" aria-hidden="true"></span> Price
 				</label>
-			</div>
-			<div class="half center">
-				<input type="radio" id="fm" name="calcMethod" value="1">
-				<br>
-				<label class="method" for="fm">
+            </div>
+            <div class="half center">
+                <input type="radio" id="fm" name="calcMethod" value="1">
+                <br>
+                <label class="method" for="fm">
 					<span class="glyphicon glyphicon-scale" aria-hidden="true"></span> Amount
 				</label>
-			</div>
-		</div>
-		<div class="row" id="litCostRow">
-			<div class="col-md-6">
-				<label>Cost Per Litre</label>
-			</div>
-			<div class="col-md-6">
-				<input id="litreCost" type="tel"/>
-			</div>
-		</div>
-		<div class="row" id="totCostRow">
-			<div class="col-md-6">
-				<label>Total Cost</label>
-			</div>
-			<div class="col-md-6">
-				<input id="totCost" type="tel"/>
-			</div>
-		</div>
-		<div class="row gone" id="fuelAmountRow">
-			<div class="col-md-6">
-				<label>Fuel Amount (litres)</label>
-			</div>
-			<div class="col-md-6">
-				<input id="fuelAmount" type="tel"/>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<label>Mileage</label>
-			</div>
-			<div class="col-md-6">
-				<input id="mileage" type="tel"/>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<button id="calculate">Calculate</button>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<h1 id="result" class="center">0mpg</h1>
-			</div>
-		</div>
-		<div class="row center">
-			Written by <a href="https://github.com/d4nc00per">Daniel Cooper</a>
-		</div>
-	</div>
+            </div>
+        </div>
+        <div class="row" id="litCostRow">
+            <div class="col-md-6">
+                <label>Cost Per Litre</label>
+            </div>
+            <div class="col-md-6">
+                <input id="litreCost" type="tel" />
+            </div>
+        </div>
+        <div class="row" id="totCostRow">
+            <div class="col-md-6">
+                <label>Total Cost</label>
+            </div>
+            <div class="col-md-6">
+                <input id="totCost" type="tel" />
+            </div>
+        </div>
+        <div class="row hide" id="fuelAmountRow">
+            <div class="col-md-6">
+                <label>Fuel Amount (litres)</label>
+            </div>
+            <div class="col-md-6">
+                <input id="fuelAmount" type="tel" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Mileage</label>
+            </div>
+            <div class="col-md-6">
+                <input id="mileage" type="tel" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="calculate">Calculate</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="result" class="center">0mpg</h1>
+            </div>
+        </div>
+        <div class="row center">
+            Written by <a href="https://github.com/d4nc00per">Daniel Cooper</a>
+        </div>
+    </div>
 </div>

@@ -10,31 +10,31 @@ var website = null;
 
 process.on('exit', exit);
 
-function errorLogHandler(msg){
+function errorLogHandler(msg) {
     gutil.log(gutil.colors.red(msg));
     gutil.beep();
 }
 
-gulp.task('less', function () {
+gulp.task('less', function() {
     gulp.src('./styles/styles.less')
-    .pipe(less({
-        compress: true
-    })).on('error', errorLogHandler)
-    .pipe(gulp.dest('./styles'));
+        .pipe(less({
+            compress: true
+        })).on('error', errorLogHandler)
+        .pipe(gulp.dest('./styles'));
 });
- 
+
 gulp.task('compressjs', function() {
-  gulp.src('src/*.js')
-    .pipe(concat('mpg.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('static'))
+    gulp.src('src/*.js')
+        .pipe(concat('mpg.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('static'))
 });
 
 gulp.task('compresscss', function() {
-  return gulp.src('styles/*.css')
-    .pipe(concat('mpg.css'))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('static'));
+    return gulp.src('styles/*.css')
+        .pipe(concat('mpg.css'))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('static'));
 });
 
 function exit() {
@@ -44,28 +44,26 @@ function exit() {
     }
 }
 
-gulp.task('jekyll', function()
-    {
-        website = spawn('jekyll.bat', ['build']);
-        website.on('error', errorLogHandler);
+gulp.task('jekyll', function() {
+    website = spawn('jekyll.bat', ['build']);
+    website.on('error', errorLogHandler);
 
-        website.stdout.on('data', (data) => {
-            console.log(data.toString('ascii'));
-        });
+    website.stdout.on('data', (data) => {
+        console.log(data.toString('ascii'));
+    });
 });
 
 gulp.task('watch', function() {
     gulp.watch("./styles/*.less", ['less']);
     gulp.watch("./styles/*.css", ['compresscss', 'jekyll']);
     gulp.watch("./*.html", ['jekyll']);
-    gulp.watch("./scripts/*", ['jekyll']);
+    gulp.watch("./src/*", ['compressjs', 'jekyll']);
     gulp.watch("./img/*", ['jekyll']);
     gulp.watch("./_layouts/*", ['jekyll']);
 });
 
 gulp.task(
-    'default', 
-    [   'less',
+    'default', ['less',
         'compresscss',
         'compressjs',
         'jekyll',
